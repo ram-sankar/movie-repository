@@ -1,0 +1,65 @@
+.LoginContainer{
+    width:30%;
+    margin-top:10%;
+    margin-left:35%;
+}
+.movieContainer{
+    width:40%;
+    margin-left:30%;
+}
+.RegisterContainer{
+    width:30%;
+    margin-top:8%;
+    margin-left:35%;
+}
+.noMatch{
+    color:red;
+    font-size: 15px;
+    margin-top:-10px;
+}
+.beforeNoMatch{
+    margin-top:40px;
+}
+.bg-orange{
+    background-color: orange;
+}
+.navbar-brand{
+    margin-left:7%;
+    font-size: 23px !important;
+    font-weight: 600;
+}
+.navbar-nav{
+    margin-right: 200px;
+}
+.nav-link{
+    color:rgb(223, 222, 222) !important;
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 5%;
+}
+.nav-link:hover{
+    color:rgb(255, 255, 255) !important;
+}
+.navbar-nav .active{
+    color:rgb(255, 255, 255) !important;
+}
+.noOfMovies{
+    font-weight: 600;
+    font-size: 25px;
+    margin-bottom: 20px;
+    margin-top:30px;
+}
+.sideList{
+    margin-top: 55%;
+}
+.clickable, .list-group-item{
+    cursor:pointer;
+}
+.newButton{
+    margin-right:9%;
+    float:right;
+}
+.searchBox{
+    width:40%;
+    margin-top:-25px;
+}
