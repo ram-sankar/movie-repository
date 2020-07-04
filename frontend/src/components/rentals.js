@@ -4,8 +4,9 @@ class Rentals extends Component {
     state = {  }
     render() { 
         return ( 
-            <div>
-                <p className="text-center">Rentals</p>
+            <div>                
+            <br/><br/>
+            <h3 className="text-center">Retails will be added soon</h3>
             </div>
          );
     }

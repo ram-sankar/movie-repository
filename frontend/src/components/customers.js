@@ -5,7 +5,8 @@ class Customers extends Component {
     render() { 
         return ( 
         <div>
-            <p className="text-center">Customers</p>
+            <br/><br/>
+            <h3 className="text-center">Cusomers will be added soon</h3>
         </div> );
     }
 }

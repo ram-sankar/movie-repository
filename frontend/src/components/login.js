@@ -18,10 +18,10 @@ class Login extends Component {
     validateInput = ({id, value}) =>{
         if(id==='password')
             if(value.trim()==='') return "User Name Required"
-            else if(value.length<=6) return "Minimum 6 Character Required"
+            else if(value.length<6) return "Minimum 6 Character Required"
         if(id==='username')
             if(value.trim()==='') return "Password Required"
-            else if(value.length<=8) return "Minimum 8 Character Required"
+            else if(value.length<8) return "Minimum 8 Character Required"
     }
 
     handleChange = e =>{

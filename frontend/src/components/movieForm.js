@@ -14,7 +14,8 @@ class MovieForm extends Component {
             genreId:''
         },
         genre:[],
-        errors:{}
+        errors:{},
+        displayText:''
     }
 
     validateInput = ({id, value}) =>{
@@ -71,7 +72,10 @@ class MovieForm extends Component {
 
     populateMovies = async () =>{
         const movieId = this.props.match.params.id
-        if(movieId==='new') return;
+        if(movieId==='new') {
+            this.setState({ displayText : 'Add New Movie' });
+            return;
+        }
 
         try{
             const { data:movieDetails } = await getMovie(movieId)
@@ -82,7 +86,7 @@ class MovieForm extends Component {
                         numberInStock:movieDetails.numberInStock,
                         genreId:movieDetails.genre._id}
 
-            this.setState({data})
+            this.setState({data, displayText : 'Edit Movie'})
         }
         catch(e){            
             if(e.response && e.response.status===404)
@@ -97,13 +101,13 @@ class MovieForm extends Component {
 
     render() { 
         const {title, dailyRentalRate, numberInStock, genreId} = this.state.data;
-        const {genre, errors} = this.state;
+        const {genre, errors, displayText} = this.state;
 
         return ( 
             <div>
                 <br/><br/>
                 <div className="movieContainer">
-                    <h3 className="text-center">Add New Movie</h3>
+                    <h3 className="text-center">{displayText}</h3>
                     <form>
                         <Input name="Title"
                             type="text"
